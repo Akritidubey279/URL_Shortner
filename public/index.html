@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorter - Premium URL Shortener</title>
+    <meta name="description" content="A beautiful and fast URL shortener application.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+    
+    <main class="container">
+        <header>
+            <h1 class="logo">Shorter<span>.</span></h1>
+            <p class="subtitle">Condense your links with elegance.</p>
+        </header>
+
+        <section class="shortener-card glass-panel">
+            <form id="shorten-form">
+                <div class="input-group">
+                    <input 
+                        type="url" 
+                        id="original-url" 
+                        placeholder="Paste your long URL here..." 
+                        required 
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="submit-btn">
+                        <span class="btn-text">Shorten</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                </div>
+                <div id="error-message" class="error-msg hidden"></div>
+            </form>
+
+            <div id="result-area" class="result-area hidden">
+                <p class="result-label">Your shortened link:</p>
+                <div class="result-box">
+                    <a id="short-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+                    <button id="copy-btn" class="icon-btn" title="Copy to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="copy-tooltip">Copied!</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with precision and style.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
